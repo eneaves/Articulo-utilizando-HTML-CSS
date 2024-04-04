@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript</h1>
+    </div>
+    <div class="container">
+        <ul>
+            <li><a href="#variables">Declaración de variables</a></li>
+            <li><a href="#datos">Tipos de Datos</a></li>
+            <li><a href="#alcance">Alcance de las variables</a></li>
+            <li><a href="#funciones">Variables y funciones</a></li>
+            <li><a href="#bucles">Bucles</a></li>
+            <li><a href="#ciclos">Ciclos y condicionales</a></li>
+            <li><a href="#objetos">Objetos y arrays</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Todo lo que necesitas saber para iniciar en Javascript</h2>
+    </div>
+    <div class="container" >
+        <p>
+            En el vertiginoso mundo de la tecnología contemporánea, Javascript emerge como un pilar fundamental. Este lenguaje de programación, nacido en los albores de la web, ha evolucionado de ser simplemente un complemento para páginas estáticas a convertirse en el lenguaje de facto para el desarrollo web moderno. Su importancia radica en su versatilidad, ya que no solo es utilizado en el lado del cliente para la interactividad dinámica en los navegadores, sino que también se ha expandido al lado del servidor con plataformas como Node.js. Además, su sintaxis sencilla y su amplia gama de bibliotecas y frameworks lo hacen accesible y poderoso para una variedad de aplicaciones, desde simples sitios web hasta complejas aplicaciones empresariales y de inteligencia artificial. En un mundo cada vez más conectado y digitalizado, Javascript se posiciona como una herramienta esencial para impulsar la innovación y el progreso tecnológico.
+        </p>
+    </div>
+    <div class="container">
+        <img src="Free-Courses-to-learn-JavaScript.webp" alt="Imagen de JS" class = "js-image">
+    </div>
+    <div class="container" >
+        <a name="variables"></a> 
+        <h1>Variables</h1>
+        <p>
+            Las variables son contenedores para almacenar valores de datos. En Javascript, las variables se declaran utilizando la palabra clave var, let o const, seguida de un nombre descriptivo y opcionalmente un valor inicial. Los nombres de las variables pueden contener letras, números, guiones bajos y signos de dólar, pero no pueden comenzar con un número. Es importante tener en cuenta que Javascript es un lenguaje de tipado dinámico, lo que significa que no es necesario especificar el tipo de datos de una variable al declararla, ya que el tipo se determina automáticamente en tiempo de ejecución. Por lo tanto, una variable puede contener un número entero, un número decimal, una cadena de texto, un valor booleano, un objeto, una función, un array, o incluso un valor nulo o indefinido.
+        </p>
+        <h2>Inicialización de variables:</h2>
+    <p>La inicialización de una variable ocurre cuando se le asigna un valor por primera vez. En JavaScript, puedes inicializar una variable usando las palabras clave <code>var</code>, <code>let</code>, o <code>const</code>, seguidas del nombre de la variable y el valor que deseas asignar.</p>
+    <pre><code>
+var nombre = "Juan"; // Inicialización de una variable llamada nombre con el valor "Juan"
+let edad = 25; // Inicialización de una variable llamada edad con el valor 25
+const PI = 3.14; // Inicialización de una constante llamada PI con el valor 3.14
+    </code></pre>
+
+    <h2>Asignación de variables:</h2>
+    <p>La asignación de variables ocurre cuando se le da un nuevo valor a una variable que ya ha sido inicializada. En JavaScript, puedes asignar un nuevo valor a una variable simplemente utilizando el operador de asignación (<code>=</code>).</p>
+    <pre><code>
+nombre = "María"; // Asignación de un nuevo valor "María" a la variable nombre
+edad = 30; // Asignación de un nuevo valor 30 a la variable edad
+    </code></pre>
+
+    <p>Es importante recordar que en el caso de las constantes (<code>const</code>), una vez inicializadas con un valor, no pueden ser reasignadas. Intentar reasignar una constante generará un error.</p>
+
+    <p>JavaScript es un lenguaje de tipado dinámico, lo que significa que no es necesario especificar el tipo de dato al inicializar una variable. El tipo de dato se infiere automáticamente del valor que se le asigna. Además, las variables pueden cambiar de tipo en cualquier momento durante la ejecución del programa.</p>
+    <pre><code>
+var x = 5; // x es inicializada como un número
+x = "Hola"; // x es reasignada como una cadena de texto
+x = true; // x es reasignada como un booleano
+    </code></pre>
+
+    <p>En resumen, la inicialización y asignación de variables son acciones comunes en JavaScript y son esenciales para trabajar con datos en tus programas.</p>
+    </div>
+    <div class="container" >
+        <a name="datos"></a> 
+        <h1>Tipos de datos</h1>
+        <p>En JavaScript, los tipos de datos se dividen en dos categorías principales: primitivos y no primitivos (también conocidos como tipos de referencia).</p>
+
+        <h2>Tipos de datos primitivos:</h2>
+        <ul>
+            <li>Number: Representa tanto enteros como números de punto flotante.</li>
+            <li>String: Secuencia de caracteres encerrados entre comillas simples o dobles.</li>
+            <li>Boolean: Representa un valor verdadero o falso.</li>
+            <li>Null: Representa la ausencia intencional de cualquier valor o un objeto no válido.</li>
+            <li>Undefined: Representa una variable que no ha sido asignada a ningún valor.</li>
+            <li>Symbol: Representa un identificador único e inmutable.</li>
+            <li>BigInt: Permite representar números enteros de tamaño arbitrario.</li>
+        </ul>
+    
+        <h2>Tipos de datos no primitivos (tipos de referencia):</h2>
+        <ul>
+            <li>Object: Es una colección de pares clave-valor.</li>
+            <li>Array: Estructura de datos que contiene una lista ordenada de elementos.</li>
+            <li>Function: Los objetos de función son instancias del constructor Function.</li>
+            <li>Date: Representa una fecha y hora.</li>
+            <li>RegExp: Representa una expresión regular para buscar patrones en cadenas de texto.</li>
+        </ul>
+    
+        <p>JavaScript es un lenguaje de tipado dinámico, lo que significa que no es necesario declarar explícitamente el tipo de dato de una variable antes de usarla.</p>
+    </div>
+    <div class="container" >
+        <a name="alcance"></a> 
+        <h1>Alcance de variables en JavaScript</h1>
+
+        <p>El alcance de las variables en JavaScript se refiere a las reglas que determinan dónde y cuándo una variable puede ser utilizada dentro del código. El alcance se puede dividir en dos tipos principales: alcance global y alcance local.</p>
+    
+        <h2>Alcance global:</h2>
+        <ul>
+            <li>Las variables declaradas fuera de cualquier función tienen un alcance global.</li>
+            <li>Las variables globales pueden ser accedidas desde cualquier lugar dentro del código, ya sea dentro de funciones, bloques de código o incluso otros archivos si están en el mismo ámbito global.</li>
+            <li>Es importante tener en cuenta que declarar demasiadas variables globales puede llevar a problemas de colisión de nombres y a un código menos mantenible.</li>
+        </ul>
+    
+        <h2>Alcance local:</h2>
+        <ul>
+            <li>Las variables declaradas dentro de una función tienen un alcance local.</li>
+            <li>Estas variables solo son accesibles dentro de la función en la que fueron declaradas. No pueden ser accedidas desde fuera de la función.</li>
+            <li>Además, las variables declaradas dentro de bloques de código (por ejemplo, dentro de un `if`, `for`, `while`, etc.) también tienen alcance local y solo son accesibles dentro de ese bloque.</li>
+            <li>JavaScript no tiene alcance de bloque antes de ES6 (ECMAScript 2015), lo que significa que las variables declaradas dentro de un bloque con `var` tienen un alcance de función.</li>
+        </ul>
+    
+        <p>Por ejemplo:</p>
+        <pre><code>
+    // Alcance global
+    var globalVariable = 'Soy global';
+    
+    function exampleFunction() {
+        // Alcance local
+        var localVariable = 'Soy local';
+        console.log(localVariable); // Imprime: 'Soy local'
+        console.log(globalVariable); // Imprime: 'Soy global'
+    }
+    
+    console.log(globalVariable); // Imprime: 'Soy global'
+    console.log(localVariable); // Error: localVariable no está definida
+        </code></pre>
+    </div>
+    <div class="container" >
+        <a name="funciones"></a> 
+        <h1>Variables y funciones</h1>
+
+    <p>Las funciones son bloques de código reutilizable que pueden ser llamados y ejecutados en cualquier momento dentro de un programa. En JavaScript, las funciones son ciudadanos de primera clase, lo que significa que pueden ser tratadas como cualquier otra variable.</p>
+
+    <h2>Declaración de funciones:</h2>
+    <pre><code>
+function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+    </code></pre>
+
+    <h2>Llamada a funciones:</h2>
+    <pre><code>
+saludar("Juan");
+    </code></pre>
+
+    <h2>Funciones anónimas:</h2>
+    <pre><code>
+var sumar = function(a, b) {
+    return a + b;
+};
+    </code></pre>
+
+    <h2>Funciones de flecha (Arrow functions):</h2>
+    <pre><code>
+var multiplicar = (a, b) => {
+    return a * b;
+};
+    </code></pre>
+
+    <h2>Funciones como valores:</h2>
+    <pre><code>
+var funcionSumar = sumar;
+var resultado = funcionSumar(3, 4); // resultado es igual a 7
+    </code></pre>
+
+    <h2>Ámbito de las funciones:</h2>
+    <p>Las variables declaradas dentro de una función están limitadas a su ámbito local y no pueden ser accedidas desde fuera de la función. Sin embargo, las funciones pueden acceder a variables definidas en ámbitos superiores a través del mecanismo de cierre (closure).</p>
+
+    <p>Las funciones son una parte fundamental de JavaScript y te permiten escribir código más modular, reutilizable y mantenible. Puedes usar funciones para encapsular lógica, reducir la repetición de código y mejorar la organización de tu programa.</p>
+    </div>
+    <div class="container" >
+        <a name="bucles"></a> 
+        <h1>Bucles en JavaScript</h1>
+
+        <h2>Bucle for</h2>
+        <p>El bucle for se utiliza para repetir un bloque de código un número determinado de veces.</p>
+        <pre>
+            <code>
+    for (let i = 0; i &lt; 5; i++) {
+        console.log("El valor de i es: " + i);
+    }
+            </code>
+        </pre>
+    
+        <h2>Bucle while</h2>
+        <p>El bucle while se utiliza para repetir un bloque de código mientras se cumpla una condición específica.</p>
+        <pre>
+            <code>
+    let j = 0;
+    while (j &lt; 3) {
+        console.log("El valor de j es: " + j);
+        j++;
+    }
+            </code>
+        </pre>
+    
+        <h2>Bucle do...while</h2>
+        <p>El bucle do...while es similar al while, pero garantiza que el bloque de código se ejecute al menos una vez.</p>
+        <pre>
+            <code>
+    let k = 0;
+    do {
+        console.log("El valor de k es: " + k);
+        k++;
+    } while (k &lt; 3);
+            </code>
+        </pre>
+    
+        <h2>Bucle for...in</h2>
+        <p>El bucle for...in se utiliza para iterar sobre las propiedades de un objeto.</p>
+        <pre>
+            <code>
+    let persona = {
+        nombre: "Juan",
+        edad: 30,
+        profesion: "Ingeniero"
+    };
+    
+    for (let prop in persona) {
+        console.log(prop + ": " + persona[prop]);
+    }
+            </code>
+        </pre>
+    
+        <h2>Bucle for...of</h2>
+        <p>El bucle for...of se utiliza para iterar sobre los valores de un objeto iterable (como un array).</p>
+        <pre>
+            <code>
+    let numeros = [1, 2, 3, 4, 5];
+    for (let num of numeros) {
+        console.log(num);
+    }
+            </code>
+        </pre>
+    </div>
+    <div class="container" >
+        <a name="ciclos"></a> 
+        <h1>Ciclos y Condicionales</h1>
+
+    <h2>Condicionales:</h2>
+    <p>Los condicionales son estructuras de control que te permiten tomar decisiones en función de una condición. En JavaScript, los condicionales se escriben utilizando la instrucción <code>if</code>, seguida de una expresión que se evalúa como verdadera o falsa.</p>
+    <pre><code>
+if (condición) {
+    // Bloque de código a ejecutar si la condición es verdadera
+} else {
+    // Bloque de código a ejecutar si la condición es falsa
+}
+    </code></pre>
+
+    <p>También puedes encadenar múltiples condiciones usando la instrucción <code>else if</code>:</p>
+    <pre><code>
+if (condición1) {
+    // Bloque de código a ejecutar si la condición1 es verdadera
+} else if (condición2) {
+    // Bloque de código a ejecutar si la condición2 es verdadera
+} else {
+    // Bloque de código a ejecutar si ninguna de las condiciones anteriores es verdadera
+}
+    </code></pre>
+
+    <h2>Ciclos:</h2>
+    <p>Los ciclos te permiten ejecutar un bloque de código varias veces. En JavaScript, los ciclos más comunes son el <code>for</code> y el <code>while</code>.</p>
+    <p>El ciclo <code>for</code> se utiliza cuando conoces de antemano la cantidad de veces que deseas que se ejecute el bloque de código:</p>
+    <pre><code>
+for (inicialización; condición; incremento/decremento) {
+    // Bloque de código a ejecutar en cada iteración
+}
+    </code></pre>
+
+    <p>El ciclo <code>while</code> se utiliza cuando no conoces la cantidad exacta de iteraciones necesarias y solo deseas que el bloque de código se ejecute mientras se cumpla una condición:</p>
+    <pre><code>
+while (condición) {
+    // Bloque de código a ejecutar mientras la condición sea verdadera
+}
+    </code></pre>
+
+    <p>Además, existe el ciclo <code>do...while</code>, que es similar a <code>while</code> pero garantiza que el bloque de código se ejecute al menos una vez antes de verificar la condición:</p>
+    <pre><code>
+do {
+    // Bloque de código a ejecutar al menos una vez
+} while (condición);
+    </code></pre>
+
+    <p>Los ciclos son herramientas poderosas que te permiten automatizar tareas repetitivas y manipular conjuntos de datos de manera eficiente en tus programas.</p>
+</body>
+        
+    </div>
+    <div class="container" >
+        <a name="objetos"></a> 
+        <h1>Objetos en JavaScript</h1> 
+        <p>Un objeto en JavaScript es una colección de propiedades y métodos relacionados. Las propiedades son variables que almacenan valores, mientras que los métodos son funciones que realizan acciones específicas. Los objetos se definen utilizando llaves {}.</p> 
+        <pre> <code> const persona = { nombre: "Juan", edad: 30, saludar: function() { console.log("Hola, soy " + this.nombre); } }; </code> </pre> 
+        <p>Para acceder a las propiedades de un objeto, se utiliza la notación de punto o la notación de corchetes:</p> 
+        <pre> <code> console.log(persona.nombre); // "Juan" console.log(persona["edad"]); // 30 persona.saludar(); // "Hola, soy Juan" </code> </pre> 
+        <h2>Arreglos en JavaScript</h2> 
+        <p>Un arreglo en JavaScript es una colección ordenada de valores. Los arreglos se definen utilizando corchetes [].</p> 
+        <pre> <code> const frutas = ["manzana", "banana", "naranja"]; </code> </pre> 
+        <p>Para acceder a los elementos de un arreglo, se utiliza la notación de corchetes con el índice correspondiente (los índices comienzan en 0):</p> 
+        <pre> <code> console.log(frutas[0]); // "manzana" console.log(frutas[1]); // "banana" console.log(frutas[2]); // "naranja" </code> </pre> 
+        <p>Los arreglos tienen una propiedad length que indica la cantidad de elementos que contienen:</p> 
+        <pre> <code> console.log(frutas.length); // 3 </code> </pre> 
+        <p>Además, los arreglos tienen varios métodos útiles, como push(), pop(), shift(), unshift(), splice(), entre otros, que permiten manipular los elementos del arreglo.</p>
+    </div>
+</body>
+</html>
